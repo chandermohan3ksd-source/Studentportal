@@ -27,6 +27,9 @@ body{
     .mycard{
     width:calc(50% - 10px);
     }
+    .search-box {
+    margin-top:7px;
+}
 }
 @media(max-width:400px){
     .mycard{
@@ -58,10 +61,6 @@ body{
     padding: 0px 20px;
 
 }
-.search-box {
-    margin-top:7px;
-}
-
 .nav-links a{
     text-decoration: none;
     color:#4B5694;
