@@ -1,0 +1,101 @@
+
+body{
+
+    margin: 0;
+    padding: 0;
+    background-color:#24B1B1 ;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.mycard{
+    width:calc(20% - 20px);
+}
+@media(max-width:1130px){
+    .mycard{
+    width:calc(25% - 20px);
+    }
+}
+@media(max-width:800px){
+    .mycard{
+    width:calc(30% - 15px);
+    }
+}
+@media(max-width:700px){
+    .mycard{
+    width:calc(50% - 10px);
+    }
+}
+@media(max-width:400px){
+    .mycard{
+    width:calc(100% - 10px);
+    }
+}
+
+
+/* NavBAr */
+.navbar{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.navCotainer{
+    display: flex;
+    align-items: center;
+    background-color: #121358;
+    justify-content: space-between;
+}
+.logo{
+    text-decoration: none;
+    color: #111844 !important;
+    font-weight: 600;
+    padding: 1rem;
+}
+.search-box input{
+    border-radius: 10px;
+    width:500px;
+    padding: 0px 20px;
+
+}
+.nav-links a{
+    text-decoration: none;
+    color:#4B5694;
+    margin-right: 10px;
+
+}
+.toggleIcon{
+    color: #111844 !important;
+}
+
+
+/* form style */
+#formstyle{
+    width:50%;
+    margin: auto;
+    margin-top:50px;
+
+}
+#formstyle h1{
+    text-align: center;
+} 
+#formstyle h4{
+    text-align: center;
+} 
+
+
+/* "flash msg style" */
+.alertMsg{
+    width: 30%;
+    height: 2.8rem;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alertMsg i{
+    margin-right: 10px;
+}

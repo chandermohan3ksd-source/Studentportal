@@ -1,0 +1,26 @@
+<%-include("layout/boilerplate.ejs")%>
+<form id="formstyle" method="post" action="/edit/<%=student._id%>?_method=put" enctype="multipart/form-data">
+<h4>Update Student Information</h4>
+  <div class="mb-3">
+    <label for="name" class="form-label">Student Name :</label>
+    <input type="text" class="form-control" id="name" name="name" value="<%=student.name%>">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Student Gmail:  </label>
+    <input type="email" class="form-control" id="email" name="email"  value="<%=student.email%>">
+  </div>
+  <div class="mb-3">
+    <label for="age">Student Age: </label>
+    <input type="number" class="form-control" id="age" name="age"  value="<%=student.age%>">
+  </div>
+   <div class="mb-3">
+    <label for="course">Course: </label>
+    <input type="text" class="form-control" id="course" name="course"  value="<%=student.course%>">
+  </div>
+  <div class="mb-3">
+    <img src="data:<%= student.image.contentType %>;base64,<%= student.image.data %>" style="width: 30%;"/><br/>
+    <label for="img">Student Image Link: </label>
+    <input type="file" class="form-control" id="img" name="image"  value="<%=student.image%>">
+  </div>
+  <button type="submit" class="btn btn-primary">Add Student</button>
+</form>

@@ -1,0 +1,33 @@
+<% if(success && success.length > 0){ %>
+<div class="alert alert-success alert-dismissible fade show alertMsg" role="alert">
+    <i class="fa-regular fa-circle-check"></i>
+    <%= success %>
+
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+<% } %>
+
+<% if(error && error.length > 0){ %>
+<div class="alert alert-danger alert-dismissible fade show alertMsg" role="alert">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    <%= error %>
+
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+<% } %>
+
+<script>
+  setTimeout(() => {
+    let alerts = document.querySelectorAll(".alertMsg");
+    console.log(alerts);
+
+    alerts.forEach((alert) => {
+      alert.classList.remove("show");
+
+      setTimeout(() => {
+        alert.remove();
+      }, 300);
+    });
+
+  }, 3000);
+</script>

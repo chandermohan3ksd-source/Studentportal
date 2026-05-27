@@ -1,0 +1,18 @@
+<%-include("layout/boilerplate")%>
+<div class="card" style="width: 18rem;">
+  <img src="data:<%= student.image.contentType %>;base64,<%= student.image.data %>" class="card-img-top" alt="..." style="height: 300px;"/>
+  <div class="card-body">
+    <h5 class="card-title"><%=student.name%></h5>
+    <div class="card-text">
+        <p> Gmail: <%=student.email%></p>
+        <p> Course: <%=student.course%></p>
+        <p> Age: <%=student.age%></p>
+        <p> AddmissionAt: <%=student.createdAt.toLocaleString()%></p>
+    </div>
+    <a href="/" class="btn btn-primary">Go Home</a>
+    <form method="post" action="/student/<%=student._id%>?_method=Delete">
+      <button class="btn btn-primary mt-2">Delete</button>
+    </form>
+    <a href="/edit/<%=student._id%>" class="btn btn-primary mt-2">edit</a>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark mb-2">
+
+  <div class="container-fluid navCotainer">
+
+    <!-- Logo -->
+    <a class="navbar-brand" href="/">Student Portal</a>
+
+    <!-- Toggle Button -->
+    <button 
+      class="navbar-toggler" 
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <!-- Search -->
+      <form class="d-flex mx-auto search-box" role="search" method="get" action="/">
+        
+        <input 
+          type="search"
+          class="form-control me-2"
+          placeholder="Search Student...."
+          name="search">
+
+        <button class="btn btn-outline-success">
+          Search
+        </button>
+
+      </form>
+
+      <!-- Links -->
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+
+        <% if(currUser){ %>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/student/new">
+              Add Student
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">
+              Logout
+            </a>
+          </li>
+
+        <% } else { %>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/login">
+              Login
+            </a>
+          </li>
+
+        <% } %>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/register">
+            Register
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
