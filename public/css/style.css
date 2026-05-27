@@ -31,10 +31,7 @@ body{
     margin-top:7px;
 }
     .search-box input{
-    border-radius: 10px;
-    width:300px;
-    padding: 0px 20px;
-
+    max-width:300px;
 }
 }
 @media(max-width:400px){
@@ -62,8 +59,9 @@ body{
     padding: 1rem;
 }
 .search-box input{
+    width:100%;
     border-radius: 10px;
-    width:500px;
+   max-width:500px;
     padding: 0px 20px;
 
 }
